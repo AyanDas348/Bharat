@@ -27,11 +27,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
+      className={`${styles.paddingX
+        } w-full flex items-center py-5 top-0 mb-[30px] relative z-20 ${scrolled ? "bg-primary" : "bg-transparent"
+        }`}
     >
       <div className='w-full flex justify-start items-center max-w-7xl mx-auto'>
         <Link
@@ -45,21 +43,31 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10 justify-self-end'>
+        {/* desktop menu */}
+        <ul className='list-none hidden lg:flex flex-row gap-10 justify-self-end'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={`${active === nav.title
+                ? 'text-white bg-slate-600 transition duration-300 delay-75'
+                : 'text-secondary hover:text-white hover:bg-slate-400 transition duration-300 delay-75'
+                } px-14 py-2 rounded-lg text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`/${nav.id}`}>{nav.title}</a>
+              <Link
+                to={`/${nav.id}`}
+                onClick={() => setActive(nav.title)}
+                className={`${active === nav.title ? 'text-white' : ''}`}
+              >
+                {nav.title}
+              </Link>
             </li>
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+
+        {/* mobile menu */}
+        <div className='lg:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
             alt='menu'
@@ -68,28 +76,29 @@ const Navbar = () => {
           />
 
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 border-2 bg-slate-50 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${toggle ? 'menu-slide-in' : 'menu-slide-out'
+              } ${toggle ? 'visible' : 'hidden' } p-6 border-2 bg-slate-50 absolute top-20 -right-5 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-black" : "text-secondary"
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? 'text-black' : 'text-secondary'
+                    }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`/${nav.id}`}>{nav.title}</a>
+                  <Link to={`/${nav.id}`} onClick={() => setActive(nav.title)}>
+                    {nav.title}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
+
       </div>
     </nav>
   );
