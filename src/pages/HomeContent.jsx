@@ -1,7 +1,6 @@
 const HomeContent = () => {
-  console.log('i ran')
   return (
-    <div className="text-white relative flex">HomeContent</div>
+    <div className="pt-20 items-center justify-center lg:hidden md:hidden">HomeContent</div>
   )
 }
 
