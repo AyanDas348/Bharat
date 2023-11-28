@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { close, logo, menu } from '../assets'
 
@@ -27,9 +25,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX
-        } w-full flex items-center py-5 top-0 mb-[30px] relative z-20 ${scrolled ? "bg-primary" : "bg-transparent"
-        }`}
+      className={`w-full flex items-center py-5 top-0 mb-[30px] relative z-20 ${scrolled ? "bg-primary" : "bg-transparent"
+        } z-10`}
     >
       <div className='w-full flex justify-start items-center max-w-7xl mx-auto'>
         <Link
@@ -77,7 +74,7 @@ const Navbar = () => {
 
           <div
             className={`${toggle ? 'menu-slide-in' : 'menu-slide-out'
-              } ${toggle ? 'visible' : 'hidden' } p-6 border-2 bg-slate-50 absolute top-20 -right-5 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+              } p-6 border-2 bg-slate-50 absolute top-20 mx-4 my-2 min-w-[140px] z-10 rounded-xl sm:overflow-hidden`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
