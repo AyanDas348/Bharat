@@ -1,11 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeContent from './pages/HomeContent';
-import HomePage from './Homepage';
+import Testimonial from './pages/Testimonial';
 import Navbar from './component/Navbar';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Modules from './pages/Modules';
-import Courses from './pages/Courses';
+import Footer from './component/Footer';
 
 const App = () => {
   return (
@@ -13,11 +10,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<HomeContent />} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/contact" exact element={<Contact />} />
-          <Route path="/module" exact element={<Modules />} />
-          <Route path="/courses" exact element={<Courses />} />
+          <Route path="/testimonial" exact element={<Testimonial />} />
         </Routes>
+        <Footer />
     </Router>
   );
 };

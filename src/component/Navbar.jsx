@@ -46,20 +46,30 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${active === nav.title
-                ? 'text-white bg-slate-600 transition duration-300 delay-75'
-                : 'text-secondary hover:text-white hover:bg-slate-400 transition duration-300 delay-75'
+                ? 'text-[#BCC6CC] transition duration-300 delay-75'
+                : 'hover:text-[#BCC6CC] transition duration-300 delay-75'
                 } px-14 py-2 rounded-lg text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <Link
                 to={`/${nav.id}`}
                 onClick={() => setActive(nav.title)}
-                className={`${active === nav.title ? 'text-white' : ''}`}
+                className={`${active === nav.title ? 'text-[#BCC6CC]' : 'text-[#BCC6CC]'}`}
               >
                 {nav.title}
               </Link>
             </li>
           ))}
+          <li
+            className="rounded-3xl bg-white px-14 py-2 text-lg w-48"
+          >
+            Sign Up
+          </li>
+          <li
+            className="rounded-3xl bg-white px-14 py-2 text-lg"
+          >
+            Login
+          </li>
         </ul>
 
 
@@ -74,7 +84,7 @@ const Navbar = () => {
 
           <div
             className={`${toggle ? 'menu-slide-in' : 'menu-slide-out'
-              } p-6 border-2 bg-slate-50 absolute top-20 mx-4 my-2 min-w-[140px] z-10 rounded-xl sm:overflow-hidden`}
+              } p-6 border-2 text-white absolute top-20 mx-4 my-2 min-w-[140px] z-10 rounded-xl sm:overflow-hidden`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
@@ -92,6 +102,17 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              <li
+                key={'signup'}
+                className={`font-poppins font-medium cursor-pointer text-[16px]`}
+              >
+                Sign Up
+              </li>
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px]`}
+              >
+                Login
+              </li>
             </ul>
           </div>
         </div>

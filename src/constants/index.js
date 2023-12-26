@@ -1,77 +1,43 @@
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: '',
+    title: 'Home'
   },
   {
-    id: "module",
-    title: "Module",
-  },
-  {
-    id: "courses",
-    title: "Courses",
-  },
-  {
-    id: "contact",
-    title: "Contact"
+    id: 'testimonial',
+    title: 'Testimonial'
   }
 ];
 
-export const modules  = [
+export const programs = [
   {
     id: 1,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
+    title: 'Cardio Strength',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.'
   },
   {
     id: 2,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
+    title: 'Fat Loss',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.'
   },
   {
     id: 3,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
-  },{
+    title: 'Weight gain',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.'
+  },
+  {
+    id: 4,
+    title: 'Nutrition',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.'
+  },
+  {
     id: 5,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
-  }
-  ,
+    title: 'ABc',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.'
+  },
   {
     id: 6,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
+    title: 'opacity',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.'
   },
-  {
-    id: 7,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
-  },
-  {
-    id: 8,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
-  },
-  {
-    id: 9,
-    title:  "Introduction to Stock Markets",
-    chapters: 15,
-    description: "The stock market can play a pivotal role in ensuring your financial security. In this module, you will learn how to get started in the stock market, its fundamentals, how it functions, and the various intermediaries that appertain it.",
-    options: ["View Module", "Watch Videos"]
-  }
 ]

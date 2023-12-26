@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'card-section': "url('/src/assets/4249454.jpg')" 
+      }
+    },
   },
   plugins: [],
 }
