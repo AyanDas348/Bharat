@@ -18,7 +18,10 @@
 }
 
 .footer {
-  background: linear-gradient((var(--glow-color)) 0%, (var(--red-glow-color)) 100%);
+  background: linear-gradient(
+    (var(--glow-color)) 0%,
+    (var(--red-glow-color)) 100%
+  );
 }
 
 * {
@@ -42,12 +45,12 @@
   padding: 0.35em 1em;
   border: 0.15em solid var(--glow-color);
   border-radius: 0.45em;
-  background: none;
+  background: scroll;
   perspective: 2em;
   font-family: "Raleway", sans-serif;
   font-size: 2em;
   font-weight: 700;
-  letter-spacing: 1em;
+  letter-spacing: 10px;
 
   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
@@ -234,8 +237,8 @@
 }
 
 .card {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 600px;
   background-color: #4158d0;
   background-image: linear-gradient(
     43deg,
@@ -324,8 +327,8 @@
 }
 @keyframes neonAnim {
   from {
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7),
-      0 0 40px rgba(255, 16, 16, 0.7), 0 0 100px rgba(255, 16, 16, 0.7);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 16, 16, 0.7),
+      0 0 100px rgba(255, 16, 16, 0.7);
   }
   to {
     text-shadow: 0 0 5px rgba(255, 16, 16, 0.7), 0 0 20px rgba(255, 16, 16, 0.7),
@@ -341,12 +344,12 @@
 
 @keyframes neonAnimWhite {
   from {
-    text-shadow: 0 0 10px var(--glow-color),
-      0 0 40px var(--glow-color), 0 0 100px var(--glow-color);
+    text-shadow: 0 0 10px var(--glow-color), 0 0 40px var(--glow-color),
+      0 0 100px var(--glow-color);
   }
   to {
-    text-shadow: 0 0 5px var(--glow-color),
-      0 0 20px var(--glow-color), 0 0 60px var(--glow-color);
+    text-shadow: 0 0 5px var(--glow-color), 0 0 20px var(--glow-color),
+      0 0 60px var(--glow-color);
   }
 }
 
@@ -361,4 +364,15 @@
   -webkit-text-stroke: 1px gray;
   -webkit-text-fill-color: transparent; /* Add a white stroke around the text */
   stroke: 1px gray; /* Add a white stroke around the text */
+}
+
+.program {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #01e6ff,
+    0 0 0.8rem #01e6ff, 0 0 2.8rem #01e6ff, inset 0 0 1.3rem #01e6ff;
+}
+
+.services {
 }

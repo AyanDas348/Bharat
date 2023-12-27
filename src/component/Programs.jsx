@@ -5,7 +5,7 @@ import { useState } from 'react'
 const Programs = () => {
     const [card, setCard] = useState(1)
     return (
-        <div className="flex bg-transparent h-[600px] bg-opacity-10 overflow-clip bg-no-repeat bg-cover ml-10 gap-40 w-full">
+        <div className="flex bg-transparent h-[900px] bg-opacity-10 overflow-clip bg-no-repeat bg-cover items-center ml-10 gap-40 w-full services">
             {/* {programs.map((item) => (
                 <div classNameName="bg-transparent" key={item.id}>
                     <p classNameName="heading text-white bg-transparent">
@@ -21,17 +21,19 @@ const Programs = () => {
                 <h2 className="hollow-text neon-red absolute bg-transparent left-10 top-14">Programs</h2>
             </div>
 
-            <div className="neon-red mt-24 cursor-pointer" onClick={() => setCard(card <= 0 ? programs.length - 1 : card - 1)}>
+            <div className="neon-red cursor-pointer" onClick={() => setCard(card <= 0 ? programs.length - 1 : card - 1)}>
                 &#8592;
             </div>
 
-            <div className="card bg-none">
-                <div className="face face1 bg-transparent">
-                    <div className="content bg-transparent items-center justify-center">
-                        <div className="neon-red bg-transparent relative">
-                            <img src={zumba} alt="zumba" className="bg-transparent" />
-                            <p className="bg-transparent card-title mx-10 relative bottom-2">{programs[card].title}</p>
-                            <p className="bg-transparent card-para mx-10 text-sm">{programs[card].description}</p>
+            <div className="program h-[75%] items-center justify-center">
+                <div className="card bg-none mt-8">
+                    <div className="face face1 bg-transparent">
+                        <div className="content bg-transparent items-center justify-center">
+                            <div className="neon-red bg-transparent relative">
+                                <img src={zumba} alt="zumba" className="bg-transparent h-[300px]" />
+                                <p className="bg-transparent card-title mx-10 relative bottom-2 mt-10">{programs[card].title}</p>
+                                <p className="bg-transparent card-para mx-10 text-sm">{programs[card].description}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
